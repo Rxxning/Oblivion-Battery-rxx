@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>失憶投捕給你力量</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFF7FB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .quote {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>失憶投捕給你力量</h1>
+        <div class="quote" id="quote-box">
+            <p id="quote-text">點擊按鈕以隨機抽取台詞。</p>
+        </div>
+        <h1>  </h1>
+        <button id="generate-quote">抽⚾</button>
+    </div>
+
+    <script>
+        const quotes = [
+            "你以為你在跟誰說話。——智將",
+            "打棒球哪有在不痛的！——藤堂葵",
+            "態度能夠傳達很多信息的。——要圭",
+            "都這麼拼命了，如果還不行的話，那就只能是運氣不好或是意外了吧！——要圭",
+            "你要對自己有自信一點。——智將",
+            "你是我的神！也就是GOD！——土屋和季",
+            "你不會是孤單一人，我會成為你的共犯。——智將",
+            "我真的能夠再度前進了，可以再向前邁進了。——藤堂葵",
+            "禁止否定別人的努力。——要圭",
+            "パイ毛！！₍₍ (̨̡ ‾᷄ᗣ‾᷅･)̧̢ ₎₎ ",
+            "來接球。——清峰葉流火",
+            "別再放棄了。——卷村（X）卷田（O）廣伸",
+            "一定會很順利的。——要圭",
+            "我不會再放棄了。——千早瞬平",
+            "溫柔地支撐我，偶爾激烈地像要弄壞我那樣。——要圭"
+        ];
+
+        const generateButton = document.getElementById('generate-quote');
+        const quoteText = document.getElementById('quote-text');
+
+        generateButton.addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            quoteText.textContent = quotes[randomIndex];
+        });
+    </script>
+
+</body>
+</html>
